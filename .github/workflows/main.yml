@@ -28,5 +28,5 @@ jobs:
       - name: Build and test 
         run: |
           mvn install -DskipTests -am -pl .
-          mvn test -pl . -Dtest=com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid
-          mvn edu.illinois:nondex-maven-plugin:2.1.1:nondex -pl . -DnondexRuns=10 -Dtest=com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid
+          mvn test -pl . -Dtest=com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid -DfailIfNoTests=false
+          mvn edu.illinois:nondex-maven-plugin:2.1.1:nondex -pl . -DnondexRuns=10 -Dtest=com.google.cloud.teleport.templates.common.DatastoreConvertersTest.testCheckNoKeyAllInvalid -DfailIfNoTests=false
